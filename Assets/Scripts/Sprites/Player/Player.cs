@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
             //corpo.MovePosition(corpo.position - velocidade * Time.deltaTime);
             corpo.velocity = new Vector2(-currentspeed, corpo.velocity.y);
             ani.SetBool("Run",true);
-            corpo.transform.localScale = new Vector3(-0.5f,0.5f,1);
+            corpo.transform.localScale = new Vector3(-1f,1f,1);
             
         }
         else if(Input.GetKey(KeyCode.RightArrow))
@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
             //corpo.MovePosition(corpo.position + velocidade * Time.deltaTime);
             corpo.velocity = new Vector2(+currentspeed, corpo.velocity.y);
             ani.SetBool("Run",true);
-                        corpo.transform.localScale = new Vector3(0.5f,0.5f,1);
+                        corpo.transform.localScale = new Vector3(1f,1f,1);
         }
         else
         {

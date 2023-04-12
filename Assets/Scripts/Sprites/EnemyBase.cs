@@ -18,6 +18,5 @@ public class EnemyBase : MonoBehaviour
     {
        var posicaoDoPlayer = player.GetComponent<Transform>();
        Vector2 horizontal = posicaoDoPlayer.position;
-       Debug.Log(horizontal);
     }
 }

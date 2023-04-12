@@ -17,6 +17,7 @@ public class HealthBase : MonoBehaviour
     {
         if(isDead) return;
         _currentLife -= damage;
+        Debug.Log(damage);
         if(_currentLife <= 0)
         {
             Kill();
