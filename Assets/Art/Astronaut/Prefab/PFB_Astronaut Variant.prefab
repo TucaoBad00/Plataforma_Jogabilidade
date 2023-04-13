@@ -325,7 +325,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 6200000, guid: ae80b25b6db3e1b429a745c21eba3ff8, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -372,7 +372,7 @@ MonoBehaviour:
   corpo: {fileID: 939169247}
   velocidade: {x: 0, y: 0}
   speed: 10
-  jumpForce: 5
+  jumpForce: 30
   run: 15
   ani: {fileID: 3319579666911068657}
 --- !u!114 &8797327467929367426

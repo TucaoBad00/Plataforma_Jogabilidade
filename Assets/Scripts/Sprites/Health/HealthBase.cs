@@ -7,6 +7,7 @@ public class HealthBase : MonoBehaviour
     public float startLife;
     public float _currentLife;
     public bool isDead = false;
+    public Animator animations;
 
     private void Awake()
     {
@@ -28,10 +29,15 @@ public class HealthBase : MonoBehaviour
         _currentLife = startLife;
         isDead = false;
     }
-    private void Kill()
+    public void Kill()
     {
         isDead = true;
-        Destroy(gameObject);
+        if(animations != null)
+        {
+            animations.SetTrigger("Die");
+        }
+
+        Destroy(gameObject,0.5f);
     }
     public void Update()
     {
