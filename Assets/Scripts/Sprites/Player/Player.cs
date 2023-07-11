@@ -6,10 +6,7 @@ public class Player : MonoBehaviour
 {
     #region Variaveis
     public Rigidbody2D corpo;
-    public Vector2 velocidade;
-    public float speed;
-    public float jumpForce;
-    public float run;
+    public SOPlayerParameters PlayerParameters;
     private float currentspeed;
     public Animator ani;
     #endregion
@@ -18,11 +15,11 @@ public class Player : MonoBehaviour
 
         if(Input.GetKey(KeyCode.LeftShift))
         {
-            currentspeed = run;
+            currentspeed = PlayerParameters.run;
         }
         else
         {
-            currentspeed = speed;
+            currentspeed = PlayerParameters.speed;
         }
         if(Input.GetKey(KeyCode.LeftArrow))
         {
@@ -51,7 +48,7 @@ public class Player : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            corpo.velocity = Vector2.up * jumpForce;
+            corpo.velocity = Vector2.up * PlayerParameters.jumpForce;
         }
     }
 }
