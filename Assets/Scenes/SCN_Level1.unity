@@ -2757,6 +2757,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 902524156, guid: 3de838754c767a446a5473969062a84e, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3090786764695304946, guid: 3de838754c767a446a5473969062a84e, type: 3}
       propertyPath: m_Name
       value: PFB_Enemy_1

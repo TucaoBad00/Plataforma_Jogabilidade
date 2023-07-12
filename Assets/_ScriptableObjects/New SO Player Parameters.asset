@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidade: {x: 0, y: 0}
   speed: 12.95
-  jumpForce: 9.45
+  jumpForce: 23.85
   run: 18.26
