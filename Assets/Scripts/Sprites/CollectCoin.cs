@@ -5,21 +5,27 @@ using UnityEngine;
 public class CollectCoin : MonoBehaviour
 {
     public SOint CoinCount;
+    public ParticleSystem ParticleSystem;
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
+    private void Awake()
+    {
+        if (ParticleSystem != null){ ParticleSystem.transform.SetParent(null); }
+    }
     // Update is called once per frame
     void Update()
     {
         
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
         {
+            if (ParticleSystem != null) { ParticleSystem.Play(); }
             Destroy(gameObject);
             CoinCount.Value += 1;
         }

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Player : MonoBehaviour
 {
     #region Variaveis
@@ -9,6 +8,7 @@ public class Player : MonoBehaviour
     public SOPlayerParameters PlayerParameters;
     private float currentspeed;
     public Animator ani;
+    public ParticleSystem ParticleSystemJump;
     #endregion
     private void Update()
     {
@@ -49,6 +49,8 @@ public class Player : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             corpo.velocity = Vector2.up * PlayerParameters.jumpForce;
+            if(ParticleSystemJump != null) { ParticleSystemJump.Play(); }
         }
     }
+  
 }
